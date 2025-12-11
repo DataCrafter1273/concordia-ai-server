@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: concordia-ai-server
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    region: frankfurt
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
